@@ -1,13 +1,15 @@
 package burger_shop;
 
-public class DeluxeBurger extends Burger {
+public class HealthyBurger extends Burger {
 
-    public DeluxeBurger(Bread breadRoll, Meat meat, Toppings toppings) {
+    public HealthyBurger(Bread breadRoll, Meat meat, Toppings toppings) {
         super(breadRoll, meat, toppings);
-        this.type = "deluxe";
+        this.type = "healthy";
     }
 
-    public double totalBurgerPrice(Toppings toppings, int bacon, int extraCheese, int extraMeat) {
+    @Override
+    public double totalBurgerPrice(Toppings toppings) {
+
         double price = 3.49;
         int max = 0;
 
@@ -20,33 +22,19 @@ public class DeluxeBurger extends Burger {
             price += .50;
             max += 1;
         }
-        if(toppings.addCheese() > 0) {
-            price += .75;
-            max += 1;
-        }
         if(toppings.addKetchup() > 0) {
             price += .50;
             max += 1;
         }
-        if(bacon > 0) {
-            price += 1.20;
-            max += 1;
-        }
-        if(extraCheese > 0) {
-            price += 1.50;
-            max += 1;
-        }
-        if(extraMeat > 0) {
-            price += 2.25;
-            max += 1;
-        }
 
-        if(max > 6) {
+        if(max > 4) {
             System.out.println("Sorry you can't have more than 6 toppings on your burger...");
         } else {
             System.out.println("Your total will be $" + price);
         }
 
+
         return price;
+
     }
 }
