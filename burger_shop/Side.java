@@ -1,15 +1,20 @@
 package burger_shop;
 
 public class Side {
-    private boolean lettuce;
-    private boolean tomato;
-    private boolean cheese;
-    private boolean ketchup;
+    private int fries;
+    private int macAndCheese;
 
-    public Side(boolean lettuce, boolean tomato, boolean cheese, boolean ketchup) {
-        this.lettuce = lettuce;
-        this.tomato = tomato;
-        this.cheese = cheese;
-        this.ketchup = ketchup;
+    public Side(int fries, int macAndCheese) {
+        this.fries = fries;
+        this.macAndCheese = macAndCheese;
     }
+
+    public int addFries() {
+        return fries;
+    }
+
+    public int addMacAndCheese() {
+        return macAndCheese;
+    }
+
 }

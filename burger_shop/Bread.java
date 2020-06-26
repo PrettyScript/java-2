@@ -1,9 +1,13 @@
 package burger_shop;
 
 public class Bread {
-    String bread = "rye";
+    private String bread;
 
     public Bread(String bread) {
         this.bread = bread;
+    }
+
+    public String getBread() {
+        return bread;
     }
 }
