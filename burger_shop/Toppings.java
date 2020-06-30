@@ -1,22 +1,22 @@
 package burger_shop;
 
-public class Toppings {
+class Toppings {
     private int lettuce;
     private int tomato;
     private int cheese;
-    private int ketchup;
+    private int pickles;
     private int bacon;
-    private int extraCheese;
-    private int extraMeat;
+    private int avocado;
+    private int onions;
 
-    public Toppings(int lettuce, int tomato, int cheese, int ketchup, int bacon, int extraCheese, int extraMeat) {
+    public Toppings(int lettuce, int tomato, int cheese, int pickles, int bacon, int avocado, int onions) {
         this.lettuce = lettuce;
         this.tomato = tomato;
         this.cheese = cheese;
-        this.ketchup = ketchup;
+        this.pickles = pickles;
         this.bacon = bacon;
-        this.extraCheese = extraCheese;
-        this.extraMeat = extraMeat;
+        this.avocado = avocado;
+        this.onions = onions;
     }
 
     public int addLettuce() {
@@ -31,19 +31,19 @@ public class Toppings {
         return cheese;
     }
 
-    public int addKetchup() {
-        return ketchup;
+    public int addPickles() {
+        return pickles;
     }
 
     public int addBacon() {
         return bacon;
     }
 
-    public int addExtraCheese() {
-        return extraCheese;
+    public int addAvocado() {
+        return avocado;
     }
 
-    public int addExtraMeat() {
-        return extraMeat;
+    public int addOnions() {
+        return onions;
     }
 }

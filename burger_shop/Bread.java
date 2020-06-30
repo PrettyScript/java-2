@@ -1,6 +1,6 @@
 package burger_shop;
 
-public class Bread {
+class Bread {
     private String bread;
 
     public Bread(String bread) {

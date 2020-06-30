@@ -1,18 +1,20 @@
 package burger_shop;
 
-public class Burger {
+class Burger {
     private Bread breadRoll;
     private Meat meat;
     private Toppings toppings;
-    private double price;
+    private double price = 3.49;
     public String type;
+    public int maxToppings;
 
     public Burger(Bread breadRoll, Meat meat, Toppings toppings) {
         this.breadRoll = breadRoll;
         this.meat = meat;
         this.toppings = toppings;
         this.price = price;
-        this.type = "plain";
+        this.type = "Plain";
+        this.maxToppings = 2;
     }
 
     public Bread getBreadRoll() {
@@ -30,24 +32,22 @@ public class Burger {
 
 
     public double totalBurgerPrice(Toppings toppings) {
-        double price = 3.49;
         int max = 0;
 
-
         if(toppings.addLettuce() > 0) {
-            price += .50;
+            price += (.50 * toppings.addLettuce());
             max += 1;
         }
         if(toppings.addTomato() > 0) {
-            price += .50;
+            price += (.50 * toppings.addTomato());
             max += 1;
         }
         if(toppings.addCheese() > 0) {
-            price += .75;
+            price += (.75 * toppings.addCheese());
             max += 1;
         }
-        if(toppings.addKetchup() > 0) {
-            price += .50;
+        if(toppings.addPickles() > 0) {
+            price += (.50 * toppings.addPickles());
             max += 1;
         }
 

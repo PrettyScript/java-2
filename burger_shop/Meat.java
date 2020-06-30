@@ -1,6 +1,6 @@
 package burger_shop;
 
-public class Meat {
+class Meat {
     private String meat;
 
     public Meat(String meat) {

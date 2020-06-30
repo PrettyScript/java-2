@@ -1,10 +1,12 @@
 package burger_shop;
 
-public class DeluxeBurger extends Burger {
+class DeluxeBurger extends Burger {
+
 
     public DeluxeBurger(Bread breadRoll, Meat meat, Toppings toppings) {
         super(breadRoll, meat, toppings);
-        this.type = "deluxe";
+        this.type = "Deluxe";
+        this.maxToppings = 6;
     }
 
     public double totalBurgerPrice(Toppings toppings, int bacon, int extraCheese, int extraMeat) {
@@ -24,7 +26,7 @@ public class DeluxeBurger extends Burger {
             price += .75;
             max += 1;
         }
-        if(toppings.addKetchup() > 0) {
+        if(toppings.addPickles() > 0) {
             price += .50;
             max += 1;
         }
